@@ -1,0 +1,451 @@
+{
+  "cells": [
+    {
+      "type": "standard.Ellipse",
+      "position": {
+        "x": 35,
+        "y": 15
+      },
+      "size": {
+        "width": 100,
+        "height": 50
+      },
+      "angle": 0,
+      "id": "fc1dbb2b-0484-4f20-a07e-0b39d325903b",
+      "z": 1,
+      "attrs": {
+        "body": {
+          "strokeWidth": 3,
+          "stroke": "#000000",
+          "fill": "green"
+        },
+        "label": {
+          "fill": "white",
+          "text": "Başla"
+        }
+      }
+    },
+    {
+      "type": "standard.Polygon",
+      "position": {
+        "x": 35,
+        "y": 120
+      },
+      "size": {
+        "width": 100,
+        "height": 75
+      },
+      "angle": 0,
+      "id": "0de728d4-9e1a-43fc-b7ca-6a7665d65321",
+      "z": 2,
+      "attrs": {
+        "body": {
+          "refPoints": "25,0 100,0 75,100 0,100",
+          "strokeWidth": 3,
+          "stroke": "#000000",
+          "fill": "orange"
+        },
+        "label": {
+          "fill": "white",
+          "text": "Sayi"
+        }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": {
+        "id": "fc1dbb2b-0484-4f20-a07e-0b39d325903b"
+      },
+      "target": {
+        "id": "0de728d4-9e1a-43fc-b7ca-6a7665d65321"
+      },
+      "id": "12319326-9e5b-4d79-9b1b-ef1650438b41",
+      "router": {
+        "name": "orthogonal"
+      },
+      "connector": {
+        "name": "normal",
+        "args": {
+          "cornerType": "line"
+        }
+      },
+      "z": 3,
+      "attrs": {
+        "line": {
+          "stroke": "#333",
+          "targetMarker": {
+            "fill": "#333"
+          }
+        }
+      }
+    },
+    {
+      "type": "standard.Polygon",
+      "position": {
+        "x": 30,
+        "y": 345
+      },
+      "size": {
+        "width": 110,
+        "height": 100
+      },
+      "angle": 0,
+      "id": "20887f90-575d-4b06-9cc6-27fd98887322",
+      "z": 4,
+      "attrs": {
+        "body": {
+          "refPoints": "25,0 75,0 100,50 75,100 25,100 0,50",
+          "strokeWidth": 3,
+          "stroke": "#000000",
+          "fill": "#FFCC00"
+        },
+        "label": {
+          "fill": "white",
+          "text": "Sayi >= 0"
+        }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": {
+        "x": 35,
+        "y": 245
+      },
+      "size": {
+        "width": 100,
+        "height": 50
+      },
+      "angle": 0,
+      "id": "daae086b-e839-4361-84bc-56c3c34ead61",
+      "z": 5,
+      "attrs": {
+        "body": {
+          "strokeWidth": 3,
+          "fill": "blue"
+        },
+        "label": {
+          "fill": "white",
+          "text": "sonuc = 1"
+        }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": {
+        "id": "0de728d4-9e1a-43fc-b7ca-6a7665d65321"
+      },
+      "target": {
+        "id": "daae086b-e839-4361-84bc-56c3c34ead61"
+      },
+      "id": "c67b0f62-7c31-4a60-9a75-372f7e8d7cb7",
+      "router": {
+        "name": "orthogonal"
+      },
+      "connector": {
+        "name": "normal",
+        "args": {
+          "cornerType": "line"
+        }
+      },
+      "z": 6,
+      "attrs": {
+        "line": {
+          "stroke": "#333",
+          "targetMarker": {
+            "fill": "#333"
+          }
+        }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": {
+        "id": "daae086b-e839-4361-84bc-56c3c34ead61"
+      },
+      "target": {
+        "id": "20887f90-575d-4b06-9cc6-27fd98887322"
+      },
+      "id": "a492ff85-fbc1-427e-8229-e6e7ec0006aa",
+      "router": {
+        "name": "orthogonal"
+      },
+      "connector": {
+        "name": "normal",
+        "args": {
+          "cornerType": "line"
+        }
+      },
+      "z": 7,
+      "attrs": {
+        "line": {
+          "stroke": "#333",
+          "targetMarker": {
+            "fill": "#333"
+          }
+        }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": {
+        "x": 210,
+        "y": 370
+      },
+      "size": {
+        "width": 150,
+        "height": 50
+      },
+      "angle": 0,
+      "id": "2c4f9e36-8609-4c3a-8092-191a4cf92fa4",
+      "z": 8,
+      "attrs": {
+        "body": {
+          "strokeWidth": 3,
+          "fill": "blue"
+        },
+        "label": {
+          "fill": "white",
+          "text": "sonuc = sonuc * Sayi"
+        }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": {
+        "id": "20887f90-575d-4b06-9cc6-27fd98887322"
+      },
+      "target": {
+        "id": "2c4f9e36-8609-4c3a-8092-191a4cf92fa4"
+      },
+      "id": "07895249-df87-492e-b8d8-52ae6fcc28a5",
+      "router": {
+        "name": "orthogonal"
+      },
+      "connector": {
+        "name": "normal",
+        "args": {
+          "cornerType": "line"
+        }
+      },
+      "z": 9,
+      "labels": [
+        {
+          "position": 0.5,
+          "attrs": {
+            "text": {
+              "text": "Evet",
+              "fill": "black",
+              "fontSize": 13
+            }
+          }
+        }
+      ],
+      "attrs": {
+        "line": {
+          "stroke": "#333",
+          "targetMarker": {
+            "fill": "#333"
+          }
+        }
+      }
+    },
+    {
+      "type": "standard.Rectangle",
+      "position": {
+        "x": 405,
+        "y": 290
+      },
+      "size": {
+        "width": 125,
+        "height": 50
+      },
+      "angle": 0,
+      "id": "f1cb6205-7d7c-4365-899c-39e9efdf9af8",
+      "z": 10,
+      "attrs": {
+        "body": {
+          "strokeWidth": 3,
+          "fill": "blue"
+        },
+        "label": {
+          "fill": "white",
+          "text": "Sayi = Sayi - 1"
+        }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": {
+        "id": "2c4f9e36-8609-4c3a-8092-191a4cf92fa4"
+      },
+      "target": {
+        "id": "f1cb6205-7d7c-4365-899c-39e9efdf9af8"
+      },
+      "id": "18ad89ce-8ca7-4fe8-b92b-0728bdf41393",
+      "router": {
+        "name": "orthogonal"
+      },
+      "connector": {
+        "name": "normal",
+        "args": {
+          "cornerType": "line"
+        }
+      },
+      "z": 11,
+      "attrs": {
+        "line": {
+          "stroke": "#333",
+          "targetMarker": {
+            "fill": "#333"
+          }
+        }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": {
+        "id": "f1cb6205-7d7c-4365-899c-39e9efdf9af8"
+      },
+      "target": {
+        "id": "20887f90-575d-4b06-9cc6-27fd98887322"
+      },
+      "id": "d20b8de4-bb6a-4755-8c00-4c47d4db0017",
+      "router": {
+        "name": "orthogonal"
+      },
+      "connector": {
+        "name": "straight",
+        "args": {
+          "cornerType": "line"
+        }
+      },
+      "z": 12,
+      "attrs": {
+        "line": {
+          "stroke": "#333",
+          "targetMarker": {
+            "fill": "#333"
+          }
+        }
+      }
+    },
+    {
+      "type": "standard.Polygon",
+      "position": {
+        "x": 110,
+        "y": 490
+      },
+      "size": {
+        "width": 100,
+        "height": 100
+      },
+      "angle": 0,
+      "id": "a0d68aee-4aba-45ac-9ebb-5705795c6c72",
+      "z": 13,
+      "attrs": {
+        "body": {
+          "refPoints": "0,0 100,0 100,75 50,75 50,100 0,100",
+          "strokeWidth": 3,
+          "stroke": "#000000",
+          "fill": "purple"
+        },
+        "label": {
+          "fill": "white",
+          "text": "Sonuç = Sayi"
+        }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": {
+        "id": "20887f90-575d-4b06-9cc6-27fd98887322"
+      },
+      "target": {
+        "id": "a0d68aee-4aba-45ac-9ebb-5705795c6c72"
+      },
+      "id": "c01d6e9c-55e4-42c3-bb89-c9b40a399a1a",
+      "router": {
+        "name": "orthogonal"
+      },
+      "connector": {
+        "name": "straight",
+        "args": {
+          "cornerType": "line"
+        }
+      },
+      "z": 14,
+      "labels": [
+        {
+          "position": 0.5,
+          "attrs": {
+            "text": {
+              "text": "Hayır",
+              "fill": "black",
+              "fontSize": 13
+            }
+          }
+        }
+      ],
+      "attrs": {
+        "line": {
+          "stroke": "#333",
+          "targetMarker": {
+            "fill": "#333"
+          }
+        }
+      }
+    },
+    {
+      "type": "standard.Ellipse",
+      "position": {
+        "x": 300,
+        "y": 515
+      },
+      "size": {
+        "width": 100,
+        "height": 50
+      },
+      "angle": 0,
+      "id": "ab0199b2-9e71-4d90-8697-fa6bd36086ec",
+      "z": 15,
+      "attrs": {
+        "body": {
+          "stroke": "#000000",
+          "fill": "red"
+        },
+        "label": {
+          "fill": "white",
+          "text": "Bitir"
+        }
+      }
+    },
+    {
+      "type": "standard.Link",
+      "source": {
+        "id": "a0d68aee-4aba-45ac-9ebb-5705795c6c72"
+      },
+      "target": {
+        "id": "ab0199b2-9e71-4d90-8697-fa6bd36086ec"
+      },
+      "id": "db69062b-c961-48df-8c48-c18a528ef23e",
+      "router": {
+        "name": "orthogonal"
+      },
+      "connector": {
+        "name": "straight",
+        "args": {
+          "cornerType": "line"
+        }
+      },
+      "z": 16,
+      "attrs": {
+        "line": {
+          "stroke": "#333",
+          "targetMarker": {
+            "fill": "#333"
+          }
+        }
+      }
+    }
+  ]
+}
